@@ -1,0 +1,1 @@
+pip is a package-management system written in Python and is used to install and manage software packages.
