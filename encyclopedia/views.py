@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
+from random import choice
 
 import markdown2
-from random import choice
 import re
 
 from . import util
