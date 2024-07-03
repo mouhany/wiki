@@ -5,13 +5,16 @@
 {% endblock %}
 
 {% block body %}
-<h1 class="border-bottom pb-2">No result for "{{title}}"</h1>
-{% if recommendations %}
-<h3>Suggestion page(s) for "{{title}}":</h3>
-<ul>
+<div class="d-flex flex-column gap-1">
+  <h1 class="">No result for "{{title}}"</h1>
+  <hr>
+  {% if recommendations %}
+  <h3>Suggestion page(s) for "{{title}}":</h3>
+  <ul>
     {% for entry in recommendations %}
     <li><a href="{% url 'entry' title=entry %}">{{ entry }}</a></li>
     {% endfor %}
-</ul>
-{% endif %}
+  </ul>
+  {% endif %}
+</div>
 {% endblock %}

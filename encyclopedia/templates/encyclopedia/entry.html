@@ -5,10 +5,11 @@
 {% endblock %}
 
 {% block body %}
-<form action="{% url 'edit' title=title %}">
-    <h1 class="border-bottom pb-2" name="title">{{ title }}</h1>
-    <div class="border-bottom mb-3" name="entry">{{ entry | safe }}</div>
-    <input type="submit" value="Edit Page">
+<form action="{% url 'edit' title=title %}" class="d-flex flex-column gap-1">
+  <h1 name="title">{{ title }}</h1>
+  <hr>
+  <div name="entry">{{ entry | safe }}</div>
+  <hr>
+  <input type="submit" class="align-self-start btn btn-primary" value="Edit Page">
 </form>
-
 {% endblock %}
